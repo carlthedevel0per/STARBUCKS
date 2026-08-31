@@ -25,7 +25,9 @@ body {
     transition: 0.3s;
 }
 .navbar img {
-    width: 100px;
+    max-width: 80px;
+    height: auto;
+    object-fit: contain;
     color: white;
 }
 .navbar li:hover a {
@@ -35,7 +37,7 @@ body {
 
 .first_header {
     font-family: "Zalando Sans SemiExpanded";
-    font-weight: 500;
+    font-weight: normal;
     text-align: center;
     font-size: 40px;
     background-color: #006241;
@@ -51,20 +53,21 @@ body {
     display: flex;
     align-items: center;
     margin: 0 auto;
-    justify-content: center;
+    justify-content: space-evenly;
     transition: all 0.3 ease;
     
 }
 .first_section img {
     width: 50%;
-    border-radius: 40px;
-    padding: 30px;
-    border: 1px outset;
+    height: 10%;
     margin: 20px;
     transition: all 0.3s ease;
+    border-radius: 30px;
+    box-shadow: 0px 10px 8px black;
 }
 .first_section img:hover {
-    transform: scale(0.9)
+    transform: scale(1.03);
+    box-shadow: 0px 15px 8px black;
 }
 .first_section h1, p {
     margin: 0px;
@@ -72,13 +75,93 @@ body {
 }
 .first_section h1 {
     font-size: 50px;
-    font-family: "Rubik Spray Paint";
+    font-weight: 900;
+    font-family: "Caacupe One";
+    color: #006241;
 }
 .first_section p {
     font-size: 25px;
     font-family: "Zalando Sans SemiExpanded";
 }
 
+.second-section {
+    display: flex;
+    margin: 20px;
+    gap: 10px;
+}
+.second-section img {
+    max-width: 50%;
+    height: auto;
+    object-fit: contain;
+    transition: 0.3s ease;
+    border-radius: 50px;
+    box-shadow: 0px 10px 10px black;
+}
+.second-section img:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 15px 10px black;
+}
+.second-header {
+    font-size: 50px;
+    padding: 20px;
+    font-family: "Caacupe One";
+    color: #006241;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .second-section {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+    .second-header {
+        font-size: 40px;
+    }
+}
+
+.third-section {
+    margin-top: 100px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px;
+    background-color: #006241;
+    align-items: center;
+    gap: 30px;
+}
+.third-section h1 {
+    font-family: "Zalando Sans SemiExpanded";
+    background-color: white;
+    color: #006241;
+    padding: 50px 100px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.third-section-inner p {
+    font-family: "Caacupe One";
+    font-size: 22px;
+    max-width: 500px;
+    color: white;
+    text-align: left;
+}
+
+@media (max-width: 768px) {
+    .third-section {
+        flex-direction: column;
+    }
+    .third-section h1 {
+        font-size: 24px;
+        padding: 30px 80px;
+    }
+    .third-section-inner p {
+        font-size: 18px;
+        text-align: center;
+    }
+}
+
+
+/* FOOTER */
 footer {
     display: flex;
     flex-direction: row;
@@ -105,24 +188,22 @@ footer {
     .navbar ul {
         font-size: 16px;
     }
-    .navbar img {
-        height: auto;
-        width: auto;
-    }
     .first_header {
         font-size: 25px;
     }
+    .first_section {
+        flex-direction: column;
+    }
     .first_section img {
-        width: 50%;
+        max-width: 50%;
         height: auto;
     }
     .first_section h1 {
-        font-size: 25px;
+        font-size: 40px;
     }
     .first_section  p {
         font-size: 20px;
     }
-
     .copyright {
         font-size: 16px;
     }
