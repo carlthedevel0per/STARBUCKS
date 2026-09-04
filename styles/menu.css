@@ -2,50 +2,132 @@ body {
   margin: 0px;
 }
 
-.navbar {
+.menu-header {
     display: flex;
     justify-content: space-between;
-}
-.navbar li {
-    list-style-type: none;
-    text-align: center;
-    display: inline-block;
     padding: 10px;
+    align-items: center;
+
+    top: 0;
+    bottom: 0;
+    z-index: 1000;
+    position: sticky;
+
+    background-color: white;
+ 
+}
+.image-icon {
+    width: 80px;
+}
+.search-icon {
+    width: 55px;
+}
+.search-button {
+    background-color: white;
+    border: 2px solid transparent;
+    margin-left: 1px;
+    padding: 2px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 2px;
+    border-top-left-radius: 2px;
+
+    transition: 0.3s ease;
+}
+.search-button:hover {
+    border: 2px solid #006241;
+}
+.link {
+    text-decoration: none;
+    border: 2px solid transparent;
+    display: inline-block;
+    padding: 5px;
+    transition: 0.3s ease;
+    border-radius: 10px;
+}
+.link:hover {
+    border: 2px solid #006241;
+}
+
+.menu-header-middle-section {
+    display: flex;
+    align-items: center;
+    max-width: 850px;
+    flex: 1;
+}
+.input-box {
+    flex: 1;
+    width: 0;
+    height: 38px;
+    border: 0px;
+    font-family: "Caacupe One";
+    font-size: 20px;
+    color: #006241;
+}
+
+.menu-header-right-section {
+    display: flex;
+    align-items: center;
+
+    gap: 5px;
+}
+
+.cart-icon {
+    width: 80px;
+}
+.cart-button {
+    position: relative;
+}
+.orders a {
+    color: #006241;
     font-family: "Zalando Sans SemiExpanded";
-    Font-weight: 400;
-    margin: 10px;
+}
+.cart-text {
+    position: absolute;
+    bottom: 0;
+    top: 7px;
+    right: 39px;
+    color: white;
+    font-family: "Caacupe One";
     font-size: 20px;
 }
-.navbar a {
-    display: block;
-    text-decoration: none;
-    color: #006241;
-    padding: 10px;
-    border-radius: 20px;
-    transition: 0.3s;
-}
-.navbar img {
-    width: 100px;
-    color: white;
-}
-.navbar li:hover a {
-    background-color: #006241;
-    color: white;
+
+@media (max-width: 768px) {
+    .menu-header {
+        gap: 5px;
+    }
+    .logo {
+        max-width: 60px;
+    }
+    .search-icon {
+        max-width: 45px;
+    }
+    .orders a {
+        font-size: 16px;
+    }
+    .input-box {
+        font-size: 16px;
+    }
+    .cart-text {
+        font-size: 18px;
+    }
 }
 
 #menu_header {
     font-family: "Zalando Sans SemiExpanded";
     text-align: center;
-    font-size: 40px;
+    font-size: 50px;
     padding: 10px;
     margin-top: 5%;
     margin-bottom: 5%;
+    color: #006241;
 }
 .category {
-    font-family: "Zalando Sans SemiExpanded";
-    font-size: 30px;
+    font-family: "Caacupe One";
+    font-size: 40px;
     margin: 10px;
     padding: 15px;
+    color: #006241;
 }
 
 .second_section {
@@ -53,13 +135,55 @@ body {
     flex-direction: row;
     justify-content: center;
 }
+
+.menu-info {
+    position: absolute;
+    display: block;
+    text-align: center;
+
+    top: 120px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+
+    opacity: 0;
+
+    transition: 0.3s all ease;
+    transform: translateY(30px);
+}
+.price {
+    color: #006241;
+    font-family: "Zalando Sans SemiExpanded";
+    font-size: 25px;
+    background-color: white;
+}
+.add-to-cart {
+    font-family: "Caacupe One";
+    font-size: 20px;
+    color: #006241;
+    background-color: white;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    transition: 0.3s ease;
+    padding: 5px 20px;
+    transform: scale(1.2);
+}
+.add-to-cart:hover {
+    border: 1px solid white;
+    background-color: #006241;
+    color: white;
+    transform: scale(1.05);
+}
+
+.menu_boxes:hover .menu-info {
+    opacity: 1;
+    transform: translateY(-30px);
+}
 .menu_boxes img {
     width: 250px;
     padding: 5px;
-    transition: all 0.3s ease;
-}
-.menu_boxes img:hover {
-    transform: scale(1.3);
+    transition: 0.3s ease;
+    object-fit: contain;
 }
 
 .menu_boxes {
@@ -70,12 +194,15 @@ body {
     background-color: #006241;
     box-shadow: 0px 0px 10px #006241;
     transition: all 0.3s ease;
+
+    position: relative;
 }
+
 .menu_boxes:hover {
     box-shadow: 5px 5px 10px #006241;
     transform: scale(0.9);
 }
-.menu_boxes p {
+.item-name {
     color: white;
     font-family: "Zalando Sans SemiExpanded";
     padding: 5px;
@@ -109,33 +236,36 @@ footer {
 .contacts_icon:hover {
     transform: scale(1.1);
 }
+
 @media (max-width: 768px) {
-
-    .navbar ul {
-        font-size: 16px;
-    }
-    .navbar img {
-        height: auto;
-        width: auto;
-    }
-
     #menu_header {
-        font-size: 25px;
+        font-size: 40px;
     }
     .category {
-        font-size: 23px;
+        font-size: 35px;
+        text-align: center;
     }
-    .second_section, .third_section {
+    .menu_boxes img {
+        max-width: 200px;
+    }
+    .item-name {
+        font-size: 14px;
+    }
+    .price {
+        font-size: 20px;
+    }
+    .add-to-cart {
+        font-size: 14px;
+    }
+
+    .second_section {
         flex-direction: column;
         align-items: center;
     }
-    .menu_boxes {
-        gap: 20px;
+    .third_section {
+        flex-direction: column;
+        align-items: center;
     }
-    .menu_boxes p {
-        font-size: 18px;
-    }
-
     .copyright {
         font-size: 16px;
     }
