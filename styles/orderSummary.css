@@ -1,0 +1,266 @@
+body {
+  margin: 0px;
+}
+
+.order-summary-header {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 5px;
+  background-color: white;
+
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.logo {
+  width: 80px;
+  object-fit: contain;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .logo {
+    max-width: 60px;
+  }
+}
+
+.view-orders-button {
+  margin-top: 10%;
+  margin-bottom: 2%;
+  padding: 5px;
+  text-align: center;
+  display: flex;
+  justify-content: right;
+
+}
+
+.view-orders-button a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  background-color: #006241;
+
+  padding: 10px;
+  width: 200px;
+
+  border-top-right-radius: 200px;
+  border-bottom-right-radius: 5px;
+  border-top-left-radius: 20px;
+  border: 2px solid transparent;
+
+  font-family: "Zalando Sans SemiExpanded";
+  font-size: 20px;
+  transition: 0.3s ease;
+}
+
+.view-orders-button a:hover {
+  border: 2px solid #006241;
+  background-color: white;
+  color: #006241;
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .view-orders-button {
+    margin-top: 20%;
+  }
+  .view-orders-button a {
+    font-size: 16px;
+  }
+}
+
+.order-summary-main-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+
+  margin-bottom: 3%;
+
+}
+
+.delivery-option-section {
+  width: 45%;
+  height: auto;
+
+  background-color: #006241;
+  padding: 5px 15px;
+  border-radius: 10px;
+}
+
+.delivery-header {
+  color: white;
+  font-family: "Zalando Sans SemiExpanded";
+  font-size: 30px;
+}
+
+.delivery-option-container {
+  background-color: white;
+  padding: 3px 10px;
+  margin: 10px;
+
+  border-radius: 10px;
+}
+
+.delivery-option {
+  background-color: #006241;
+  padding: 5px;
+  margin: 8px;
+
+  color: white;
+  border-top-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border: 2px solid transparent;
+
+  transition: 0.3s ease;
+}
+
+.delivery-option:hover {
+  background-color: white;
+  color: #006241;
+  border: 2px solid #006241;
+
+  transform: scale(0.9);
+}
+
+.delivery-option label {
+  font-family: "Zalando Sans SemiExpanded";
+  font-size: 20px;
+}
+
+.delivery-option p {
+  font-family: "Caacupe One";
+  font-size: 20px;
+}
+
+.order-summary-section {
+  width: 45%;
+  height: auto;
+
+  background-color: #006241;
+  padding: 5px 15px;
+  border-radius: 10px;
+}
+
+.summary-header {
+  font-family: "Zalando Sans SemiExpanded";
+  color: white;
+  font-size: 30px;
+}
+
+.order-summary-container {
+  display: flex;
+  justify-content: space-between;
+
+  background-color: white;
+  padding: 5px 10px;
+  border-radius: 10px;
+  
+}
+
+.summary-category {
+  background-color: #006241;
+  color: white;
+  padding: 5px 15px;
+  border-top-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  margin: 20px;
+
+  font-family: "Caacupe One";
+  font-size: 20px;
+}
+
+.summary-prices {
+  background-color: #006241;
+  color: white;
+  padding: 5px 15px;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  margin: 20px;
+
+  font-family: "Caacupe One";
+  font-size: 20px;
+}
+
+.order-button {
+  display: flex;
+  margin: 40px;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.place-order-button {
+  width: 100%;
+  margin: 0px auto;
+  text-align: center;
+
+  padding: 10px 20px;
+  background-color: #006241;
+  color: white;
+  border: 2px solid white;
+  border-radius: 10px;
+
+  font-family: "Zalando Sans SemiExpanded";
+  font-size: 15px;
+  transition: 0.3s ease;
+
+  transform: scale(1.1);
+}
+
+.place-order-button:hover {
+  background-color: white;
+  color: #006241;
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .order-summary-main-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .delivery-option-section {
+    width: 80%;
+  }
+
+  .delivery-header {
+    font-size: 25px;
+  }
+
+
+  .delivery-option label {
+    font-size: 16px;
+  }
+
+  .delivery-option p {
+    font-size: 18px;
+  }
+
+  .order-summary-section {
+    width: 80%;
+  }
+
+  .summary-header {
+    font-size: 25px;
+  }
+
+  .summary-category {
+    font-size: 18px;
+  }
+
+  .summary-prices {
+    font-size: 18px;
+  }
+
+  .place-order-button {
+    font-size: 13px;
+  }
+}
+
+
+
+

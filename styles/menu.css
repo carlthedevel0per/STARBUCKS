@@ -95,6 +95,7 @@ body {
 @media (max-width: 768px) {
     .menu-header {
         gap: 5px;
+        padding: 5px;
     }
     .logo {
         max-width: 60px;

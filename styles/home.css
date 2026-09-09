@@ -5,6 +5,15 @@ body {
 .navbar {
     display: flex;
     justify-content: space-between;
+
+    top: 0;
+    right: 0;
+    left: 0;
+    position: fixed;
+    z-index: 1000;
+
+    background-color: white;
+
 }
 .navbar li {
     list-style-type: none;
@@ -35,6 +44,12 @@ body {
     color: white;
 }
 
+@media (max-width: 768px) {
+    .navbar li {
+        font-size: 16px;
+    }
+}
+
 .first_header {
     font-family: "Zalando Sans SemiExpanded";
     font-weight: normal;
@@ -44,7 +59,7 @@ body {
     color: white;
     padding: 10px;
     transition: all 0.4s ease;
-    margin-top: 10%;
+    margin-top: 20%;
     margin-bottom: 10%;
    /* transform: translateY(50px); */
 }
@@ -185,9 +200,6 @@ footer {
 }
 
 @media (max-width: 768px) {
-    .navbar ul {
-        font-size: 16px;
-    }
     .first_header {
         font-size: 25px;
     }
