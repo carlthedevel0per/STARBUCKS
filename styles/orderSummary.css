@@ -33,7 +33,7 @@ body {
   padding: 5px;
   text-align: center;
   display: flex;
-  justify-content: right;
+  justify-content: space-between;
 
 }
 
@@ -122,7 +122,7 @@ body {
   color: #006241;
   border: 2px solid #006241;
 
-  transform: scale(0.9);
+  transform: scale(0.92);
 }
 
 .delivery-option label {
