@@ -176,6 +176,13 @@ body {
     color: white;
     transform: scale(1.05);
 }
+.menu-info select {
+    margin: 10px;
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-family: "Caacupe One";
+    font-size: 15px;
+}
 
 .menu_boxes:hover .menu-info {
     opacity: 1;
