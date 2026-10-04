@@ -50,6 +50,52 @@ export function updateCartQuantity() {
 
 }
 
+export function updateProductQuantity(productId) {
+  
+  const container = document.querySelector(`.js-order-details-${productId}`);
+
+  const quantityInput = container.querySelector('.js-input-bar').value;
+
+  const newQuantity = Number(quantityInput);
+
+  if (newQuantity <= 0) {
+    window.alert('Quantity should be 1 or higher.')
+  }
+
+  else if (newQuantity > 0) {
+
+    cart.forEach((cartItem) => {
+      if (cartItem.productId === productId) {
+        cartItem.quantity = newQuantity;
+      }
+
+      saveToStorage();
+    })
+
+    container.classList.remove('is-editing-quantity');
+
+    container.querySelector('.js-quantity-label')
+        .innerHTML = `Quantity: ${newQuantity}`;
+  }
+
+}
+
+export function deleteFromCart(productId) {
+
+  let newCart = [];
+
+  cart.forEach((cartItem) => {
+    if (cartItem.productId !== productId) {
+      newCart.push(cartItem);
+    }
+  });
+
+  cart = newCart;
+
+  saveToStorage();
+
+}
+
 export function saveToStorage() {
   localStorage.setItem('cart', JSON.stringify(cart));
 }

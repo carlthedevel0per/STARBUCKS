@@ -21,8 +21,8 @@
     </div>
 
     <div class="orders-middle-header">
-      <input type="text" placeholder="Search" class="input-box">
-      <button class="search-button">
+      <input type="text" placeholder="Search" class="input-box js-input-box">
+      <button class="search-button js-search-button">
         <img src="Photos/search-icon.png" class="search-icon">
       </button>
     </div>
@@ -31,7 +31,7 @@
 
       <a href="checkout.html" class="link cart-button">
         <img src="Photos/cart-icon.png" class="cart-icon" >
-        <div class="cart-text"> 3 </div>
+        <div class="cart-text js-cart-quantity"> 0 </div>
       </a>
 
     </div>
@@ -42,59 +42,12 @@
     <h1> YOUR ORDERS </h1>
   </div>
 
-  <div class="ordered-item-container">
-
-    <div class="order-details">
-
-      <p> Order Placed:
-         <i> Sep 20 </i> 
-      </p>
-
-      <p> Order Total: 
-          <i> $100 </i>
-      </p>
-
-      <p> Order ID:
-        <i> FDADFADAAASASG </i> 
-      </p>
-
-      <p> Delivery Date:
-          <i> Sep 20 </i>
-      </p>
-
-      <div class="track-button">
-        <button class="track-package-button">
-          TRACK PACKAGE
-        </button>
-      </div>
-
-    </div>
-
-    <div class="ordered-item-details">
-
-      <div class="each-ordered-item">
-        <img src="Photos/churros_crema-removebg-preview.png" class="item-image">
-
-        <div class="item-specific-details">
-          <h3> Churros </h3>
-          <p> <b> Quantity: </b> 1 </p>
-         </div>
-
-      </div>
-
-      <div class="each-ordered-item">
-        <img src="Photos/frappucino-removebg-preview.png" class="item-image">
-
-        <div class="item-specific-details">
-          <h3> Frappucino </h3>
-          <p> <b> Quantity: </b> 2 </p>
-        </div>
-
-      </div>
-
-    </div>
+  <div class="ordered-item-whole-container js-ordered-item-container"> 
 
   </div>
+
+
+  <script src="scripts/ordersPage.js" type="module"></script>
   
 </body>
 </html>

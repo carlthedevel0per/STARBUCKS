@@ -54,6 +54,8 @@ body {
   font-size: 20px;
   border-radius: 5px;
   padding: 5px;
+
+  color: #006241;
 }
 .search-button {
   background-color: white;
@@ -96,6 +98,12 @@ body {
 
 /* main details */
 
+.ordered-item-whole-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 .orders-first-text {
   margin-top: 100px;
   display: flex;
@@ -128,6 +136,7 @@ body {
   flex-direction: column;
   align-items: left;
   justify-content: space-evenly;
+  width: 300px;
 
   background-color: white;
   padding: 5px;
@@ -147,20 +156,18 @@ body {
 
 .ordered-item-details {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   margin: 0px auto;
-  border-radius: 5px;
-
+  align-items: center;
+  gap: 10px;
 }
 
 .each-ordered-item {
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
+  flex-direction: column;
   align-items: center;
+  text-align: center;
   margin: 12px;
-  
 
   background-color: white;
   border-radius: 10px;

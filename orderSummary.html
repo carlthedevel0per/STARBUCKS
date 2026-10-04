@@ -31,33 +31,16 @@
     <a href="orders.html">
       VIEW ORDERS
     </a>
+
   </div>
 
   <div class="order-summary-main-container">
 
-    <div class="delivery-option-section">
+    <div class="delivery-option-section"> 
 
       <h1 class="delivery-header"> Choose a delivery date: </h1>
 
-      <div class="delivery-option-container">
-
-        <div class="delivery-option">
-          <input type="radio" name="option" id="option1">
-          <label for="option1"> Monday, Sep 12 </label>
-          <p> $5.99 </p>
-        </div>
-
-        <div class="delivery-option">
-          <input type="radio" name="option" id="option2">
-          <label for="option2"> Wednesday, Sep 14 </label>
-          <p> $2.99 </p>
-        </div>
-
-        <div class="delivery-option">
-          <input type="radio" name="option" id="option3">
-          <label for="option3"> Monday, Sep 19 </label>
-          <p> Free </p>
-        </div>
+      <div class="delivery-option-container js-delivery-option-container">
 
       </div>
 
@@ -67,40 +50,13 @@
 
       <h1 class="summary-header"> Order Summary: </h1>
 
-      <div class="order-summary-container">
-
-        <div class="order-summary-category">
-
-          <p class="summary-category"> Items(3): </p>
-
-          <p class="summary-category"> Shipping fee: </p>
-
-          <p class="summary-category"> Total before Tax: </p>
-
-          <p class="summary-category"> Tax (10%): </p>
-
-          <p class="summary-category"> Overall total: </p>
-
-        </div>
-
-        <div class="order-summary-prices">
-
-          <p class="summary-prices"> $100 </p>
-
-          <p class="summary-prices"> $100 </p>
-
-          <p class="summary-prices"> $100 </p>
-
-          <p class="summary-prices"> $100 </p>
-
-          <p class="summary-prices"> $100 </p>
-        </div>
+      <div class="order-summary-container js-order-summary-container">
 
       </div>
 
       <div class="order-button">
 
-        <button class="place-order-button">
+        <button class="place-order-button js-place-order-button">
           PLACE ORDER
         </button>
 
@@ -109,6 +65,10 @@
     </div>
 
   </div>
+
+  <script src="scripts/orderSummary/deliverySection.js" type="module"> </script>
+
+  <script src="scripts/orderSummary/pricesSection.js" type="module"> </script>
 
   
 </body>

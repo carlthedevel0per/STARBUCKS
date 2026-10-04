@@ -21,83 +21,21 @@
     </div>
 
     <div class="checkout-header-middle-section">
-      <h1> CHECKOUT (3) ITEMS </h1>
+      <h1 class="js-checkout-items-header"> CHECKOUT (3) ITEMS </h1>
     </div>
 
     <div class="checkout-header-right-section">
       <a href="checkout.html" class="cart-button link">
         <img src="Photos/cart-icon.png" class="cart-icon">
-        <div class="cart-text">
-          <p> 3 </p>
+        <div class="cart-text js-cart-quantity">
+           0
         </div>
       </a>
     </div>
 
   </div>
 
-  <div class="cart-item-grid">
-
-    <div class="cart-item-container">
-
-      <div class="cart-item-section">
-
-        <div class="cart-item">
-          <img src="Photos/churros_crema-removebg-preview.png" class="item-image">
-        </div>
-
-        <div class="cart-item-details">
-          <h1> Churros </h1>
-          <p> $100</p>
-        </div>
-
-      </div>
-
-      <div class="cart-item-buttons">
-
-        <p> Quantity: 2 </p>
-
-        <button class="item-buttons">
-          UPDATE
-        </button>
-
-        <button class="item-buttons">
-          DELETE
-        </button>
-
-      </div>
-
-    </div>
-
-    <div class="cart-item-container">
-
-      <div class="cart-item-section">
-
-        <div class="cart-item">
-          <img src="Photos/frappucino-removebg-preview.png" class="item-image">
-        </div>
-
-        <div class="cart-item-details">
-          <h1> Frappucino </h1>
-          <p> $100</p>
-        </div>
-
-      </div>
-
-      <div class="cart-item-buttons">
-
-        <p> Quantity: 1 </p>
-
-        <button class="item-buttons">
-          UPDATE
-        </button>
-
-        <button class="item-buttons">
-          DELETE
-        </button>
-
-      </div>
-
-    </div>
+  <div class="cart-item-grid js-checkout-container">
   
   </div>
 
@@ -106,6 +44,8 @@
       DO YOU WANT TO CHECKOUT THIS ITEMS?
     </a>
   </div>
+
+  <script src="scripts/checkout.js" type="module"> </script>
   
 </body>
 </html>

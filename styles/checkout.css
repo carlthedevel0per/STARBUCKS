@@ -38,7 +38,7 @@ body {
 }
 .cart-text {
   position: absolute;
-  top: -10px;
+  top: 8px;
   right: 39px;
 
   color: white;
@@ -74,7 +74,7 @@ body {
 .cart-item-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  margin-top: 10%;
+  margin-top: 120px;
 }
 
 .cart-item-container {
@@ -85,11 +85,11 @@ body {
 
 .cart-item-section {
   display: flex;
-  justify-content: space-evenly;
   align-items: center;
-  gap: 10px;
+  justify-content: space-evenly;
+  gap: 5px;
   margin: 10px;
-  width: 80%;
+  width: 90%;
   height: auto;
   
   background-color: #006241;
@@ -147,6 +147,41 @@ body {
   font-size: 23px;
   font-family: "Caacupe One";
 }
+
+.cart-item-buttons input {
+  width: 30px;
+  font-size: 16px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 0px;
+}
+
+.input-bar {
+  display: none;
+}
+
+.save-button {
+  display: none;
+}
+
+.is-editing-quantity .input-bar {
+  display: initial;
+}
+
+.is-editing-quantity .save-button {
+  display: initial;
+}
+
+.is-editing-quantity .update-button {
+  display: none;
+}
+.is-editing-quantity .delete-button {
+  display: none;
+}
+.is-editing-quantity .quantity-label {
+  display: none;
+}
+
 
 .item-buttons {
   color: #006241;
